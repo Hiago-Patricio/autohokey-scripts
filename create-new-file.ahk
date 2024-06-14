@@ -1,4 +1,4 @@
-﻿; This is part of my AutoHotKey [1] script. When you are in Windows Explorer it
+; This is part of my AutoHotKey [1] script. When you are in Windows Explorer it
 ; allows you to press Alt+N and type a filename, and that file is created
 ; in the current directory and opened in the appropriate editor (usually
 ; [gVim](http://www.vim.org/) in my case, but it will use whatever program is
@@ -75,10 +75,11 @@
     FileCreateDir, %folder_path%
 	
     ; Create file
-    FileAppend, , %UserInput%
+    ;FileAppend, , %UserInput%
+	Run, pwsh.exe -Command "'' | Out-File -Encoding UTF8BOM '"%UserInput%"'"
 
     ; Open the file in the appropriate editor
-    Run %UserInput%
+    ;Run %UserInput%
 
     Return
 
