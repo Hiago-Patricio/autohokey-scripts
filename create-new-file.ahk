@@ -68,13 +68,13 @@
         Return
 
     path_array := StrSplit(UserInput, "\")
-	path_array.Pop()
-	folder_path := join(path_array, "\")
+    path_array.Pop()
+    folder_path := join(path_array, "\")
 
-	; Create folder
-	FileCreateDir, %folder_path%
+    ; Create folder
+    FileCreateDir, %folder_path%
 	
-	; Create file
+    ; Create file
     FileAppend, , %UserInput%
 
     ; Open the file in the appropriate editor
@@ -82,11 +82,11 @@
 
     Return
 
-	join(strArray, char)
-	{
-		s:= ""
-		for i, v in strArray
-			s .= char . v
-		return substr(s, 2)
-	}
+    join(strArray, char)
+    {
+        s:= ""
+        for i, v in strArray
+            s .= char . v
+        return substr(s, 2)
+    }
 #IfWinActive
