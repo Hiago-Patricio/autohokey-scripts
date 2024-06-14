@@ -76,7 +76,7 @@
 	
     ; Create file
     ;FileAppend, , %UserInput%
-	Run, pwsh.exe -Command "'' | Out-File -Encoding UTF8BOM '"%UserInput%"'"
+    Run, pwsh.exe -Command "'' | Out-File -Encoding UTF8BOM '"%UserInput%"'"
 
     ; Open the file in the appropriate editor
     ;Run %UserInput%
